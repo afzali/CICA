@@ -13,7 +13,7 @@ $header = '<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سیستم استقرار گیت‌هاب</title>
+    <title>سیسا - سامانه یکپارچه سازی و استقرار اتومات</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,6 +46,10 @@ $header = '<!DOCTYPE html>
             border-color: #86b7fe;
             box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
         }
+        #log-search{
+            width: 100%;
+    font-family: inherit;
+        }
         .text-muted {
             color: #6c757d !important;
         }
@@ -56,7 +60,7 @@ $header = '<!DOCTYPE html>
 
 $navbar = '<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="?action=home">سیستم استقرار گیت‌هاب</a>
+        <a class="navbar-brand" href="?action=home">سیستم سیسا</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -89,7 +93,7 @@ $navbar = '<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
 $footer = '<footer class="mt-5 py-3 bg-dark text-white">
     <div class="container text-center">
-        <small>&copy; '.date('Y').' سیستم استقرار گیت‌هاب</small>
+        <small>&copy; '.date('Y').' سیستم سیسا</small>
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -1110,7 +1114,7 @@ function show_logs() {
                     
                     <div class="col-md-6">
                         <div class="input-group">
-                            <input type="text" class="form-control" name="search" placeholder="جستجو در گزارش‌ها..." 
+                            <input type="text" class="form-control" id="log-search" name="search" placeholder="جستجو در گزارش‌ها..." 
                                    value="<?php echo htmlspecialchars($search); ?>">
                             <button class="btn btn-primary" type="submit">جستجو</button>
                         </div>
