@@ -48,11 +48,14 @@ $header = '<!DOCTYPE html>
         }
         #log-search{
             width: 100%;
-    font-family: inherit;
+            font-family: inherit;
         }
         .text-muted {
             color: #6c757d !important;
         }
+        .btn.btn-sm.btn-danger{
+            margin-right: 10px;
+        } 
     </style>
 </head>
 <body>
@@ -60,7 +63,7 @@ $header = '<!DOCTYPE html>
 
 $navbar = '<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="?action=home">سیستم سیسا</a>
+        <a class="navbar-brand" href="?action=home">سیسا</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
