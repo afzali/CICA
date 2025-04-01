@@ -1,0 +1,53 @@
+# Protect the directory
+Options -Indexes
+
+# Deny access to SQLite database files
+<FilesMatch "\.(db|sqlite|sqlite3|db-journal|sqlite-journal)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Deny access to .htaccess and .gitignore files
+<FilesMatch "^\.">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Deny access to backup files
+<FilesMatch "~$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Allow access to PHP files
+<FilesMatch "\.php$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Protect against potential exploits
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Prevent access to potentially sensitive files
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteCond %{REQUEST_FILENAME} \.(log|txt|md)$
+    RewriteRule .* - [F,L]
+    
+    # Redirect all requests to index.php except for existing files
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+# PHP settings for better security
+<IfModule mod_php.c>
+    # Disable showing PHP errors to visitors
+    php_flag display_errors off
+    
+    # Disable PHP file uploads if not needed
+    # php_flag file_uploads off
+    
+    # Disable remote file includes
+    php_flag allow_url_include off
+    php_flag allow_url_fopen off
+</IfModule>
