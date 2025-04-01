@@ -16,15 +16,12 @@ $header = '<!DOCTYPE html>
     <title>سیستم استقرار گیت‌هاب</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: Vazir;
-            src: url(\'https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir.woff2\') format(\'woff2\');
-            font-weight: normal;
-            font-display: swap;
-        }
         body {
-            font-family: Vazir, Tahoma, Arial, sans-serif;
+            font-family: \'Vazirmatn\', Tahoma, Arial, sans-serif;
             background-color: #f8f9fa;
         }
         .navbar-brand {
